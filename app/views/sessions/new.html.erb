@@ -1,4 +1,4 @@
-<%= form_tag (:session, url: login_path) do %>
+<%= form_tag ({controller: "sessions", action: "create"}) do %>
   <!-- <%= f.label :name %><br /> -->
   <%= text_field_tag(:user, :name) %><br /><br />
 
