@@ -1,7 +1,7 @@
 <%= form_tag ({controller: "sessions", action: "create"}) do %>
-  <%= text_field(:user, :name) %><br /><br />
+  <label>Username: <%= text_field(:user, :name) %></label><br /><br />
 
-  <%= text_field(:user, :password) %><br /><br />
+  <label>Password: <%= text_field(:user, :password) %></label><br /><br />
 
   <input type=submit value='login' /> or <%= link_to 'create a new account', new_user_path %>
 <% end %>
