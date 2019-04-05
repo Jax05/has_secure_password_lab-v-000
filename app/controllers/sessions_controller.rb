@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(id: params[:id])
+    user = User.find_by(name: params[:name])
 
-    if user && user.authenticate(params[:password])
+    if user && user.authenticates(params[:password])
       session[:user_id] = user.id
       redirect_to welcome_index_path
     else
