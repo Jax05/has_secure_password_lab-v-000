@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    raise params.inspect
     user = User.find_by(name: params[:name])
 
     if user && user.authenticate(params[:password])
