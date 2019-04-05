@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      raise session[:user_id].inspect
       redirect_to welcome_index_path
     else
       render :new
